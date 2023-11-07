@@ -1,0 +1,16 @@
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+# wdt:735 -- given name -- wd:Q42311473 -- Lane
+# wdt:734 -- family name -- # wd:Q37539030 -- Rasberry
+# wdt:P21 -- gender
+
+SELECT ?person ?gender ?itemLabel
+WHERE {
+  ?person wdt:P735 wd:Q42311473.
+  ?person wdt:P734 wd:Q37539030.
+  ?person wdt:P21 ?gender
+}
+
+# wd:Q26202725 -- lane
+# wd:Q6581097 -- male
